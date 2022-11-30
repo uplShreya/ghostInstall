@@ -3,7 +3,15 @@
 <main class="site-main">
 
     {{#tag}}
+  
     <div class="term-container gh-canvas">
+            <ul class="breadcrumb">
+                <li class="breadcrumb-item"><a href="{{@site.url}}">Home</a></li>
+                {{#primary_tag}}
+                <li class="breadcrumb-item"><a href="{{url}}">{{name}}</a></li>
+                {{/primary_tag}}
+                <li class="breadcrumb-item breadcrumb-current">{{title}}</li>
+    </ul>
         <section class="term">
             <h1 class="term-name">{{name}}</h1>
             {{#if description}}
