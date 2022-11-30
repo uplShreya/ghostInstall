@@ -1,0 +1,11 @@
+
+<header style="background-color:aqua ;">
+    <h1 style="color: red;">{{@site.title}}</h1>
+    <h2 style="color:red">{{@site.description}}</h2>
+</header>
+<main>
+    {{#foreach posts}}
+    <h1>{{title}}</h1>
+    {{/foreach}}
+</main>
+{{pagination}}

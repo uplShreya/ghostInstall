@@ -1,0 +1,20 @@
+{
+"name": "custom-theme",
+"description": "A clean, minimal custom theme for the Ghost publishing platform",
+"version": "0.0.1",
+"engines": {
+    "ghost": ">=5.0.0"
+},
+"author": {
+    "name": "Custom Theme",
+    "email": "shreya.saha@utplco.com"
+},
+"keywords": [
+    "ghost",
+    "theme",
+    "ghost-theme"
+],
+"config": {
+    "posts_per_page": 5
+}
+}
