@@ -1,6 +1,13 @@
 {{#post}}
 <article>
     <header>
+        <ul class="breadcrumb">
+                <li class="breadcrumb-item"><a href="/">Home</a></li>
+                {{#primary_tag}}
+                <li class="breadcrumb-item"><a href="{{url}}">{{name}}</a></li>
+                {{/primary_tag}}
+                <li class="breadcrumb-item breadcrumb-current">{{title}}</li>
+            </ul>
         <h1>{{titile}}</h1>
     </header>
     <section>

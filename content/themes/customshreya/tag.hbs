@@ -1,0 +1,32 @@
+{{!< default}}
+
+<main class="site-main">
+
+    {{#tag}}
+  
+    <div class="term-container gh-canvas">
+            <ul class="breadcrumb">
+                <li class="breadcrumb-item"><a href="/">Home</a></li>
+                {{#primary_tag}}
+                <li class="breadcrumb-item"><a href="{{url}}">{{name}}</a></li>
+                {{/primary_tag}}
+                <li class="breadcrumb-item breadcrumb-current">{{title}}</li>
+            </ul>
+        <section class="term">
+            <h1 class="term-name">{{name}}</h1>
+              {{#get "posts" order="published_at asc" filter="tag:{{slug}}" limit="5" as |featured|}}
+            <ul class="topic-article-feed">
+                {{#foreach posts}}
+                <h1><a href="{{url}}">{{title}}</a></h1>
+                {{/foreach}}
+            </ul>
+            {{/get}}
+        </section>
+    </div>
+    {{/tag}}
+
+  
+
+    {{pagination}}
+
+</main>

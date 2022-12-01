@@ -15,6 +15,14 @@
     "ghost-theme"
 ],
 "config": {
-    "posts_per_page": 5
+    "posts_per_page": 10,
+    "custom":{
+        "show_featured_posts": {
+            "type": "boolean",
+            "default": true,
+            "group": "homepage"
+        }
+    }
+ 
 }
 }

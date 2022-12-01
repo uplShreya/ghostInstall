@@ -1,11 +1,29 @@
-
-<header style="background-color:aqua ;">
-    <h1 style="color: red;">{{@site.title}}</h1>
-    <h2 style="color:red">{{@site.description}}</h2>
-</header>
+{{!< default}} 
 <main>
-    {{#foreach posts}}
-    <h1><a href="{{url}}">{{title}}</a></h1>
-    {{/foreach}}
-</main>
-{{pagination}}
+    {{#get "tags" limit="all"}}
+    <div style="display: grid;
+  gap: 80px 60px;
+  grid-template-columns: 1fr 1fr;
+  margin-left: 30px;
+}">
+        {{#foreach tags}}
+        <section class="topic">
+            <header class="topic-header">
+                <h2 class="topic-name">
+                    <a href="{{url}}">{{name}}</a>
+                </h2>
+            </header>
+            {{#get "posts" order="published_at asc" filter="tag:{{slug}}" limit="5" as |featured|}}
+            <ul class="topic-article-feed">
+                {{#foreach posts}}
+                <h1><a href="{{url}}">{{title}}</a></h1>
+                {{/foreach}}
+            </ul>
+            {{/get}}
+            <a class="topic-more" href="{{url}}">Show more →</a>
+        </section>
+        {{/foreach}}
+
+    </div>
+    {{/get}}
+    </main>
