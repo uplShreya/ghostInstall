@@ -1,3 +1,5 @@
+{{!< default}}
+
 {{#post}}
 <article>
     <header>
@@ -8,7 +10,11 @@
                 {{/primary_tag}}
                 <li class="breadcrumb-item breadcrumb-current">{{title}}</li>
             </ul>
-        <h1>{{titile}}</h1>
+        <h1>{{title}}</h1>
+        <div class="post-meta">
+                Last updated on&nbsp;
+                <time datetime="{{date format=" YYYY-MM-DD"}}">{{date updated_at}}</time>
+            </div>
     </header>
     <section>
         {{content}}

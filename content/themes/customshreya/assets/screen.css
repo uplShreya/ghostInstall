@@ -1,0 +1,16 @@
+.breadcrumb {
+    display: flex;
+    list-style: none;
+    padding: 0;
+}
+
+.breadcrumb li+li::before {
+    content: ">";
+    margin: 0 0.5em;
+    opacity: .5;
+}
+
+.breadcrumb-item-current {
+    font-weight: 500;
+    font-size: 18px;
+}
